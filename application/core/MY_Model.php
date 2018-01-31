@@ -30,7 +30,7 @@ class Base_Model extends MY_Model{
 	function set_table_name($tablename='',$tablepre='t_sys_')
 	{
 		$this->db_tablepre = $tablepre;
-		$this->table_name = $this->db_tablepre.$this->table_name;
+		$this->table_name = $this->db_tablepre.($tablename?$tablename:$this->table_name);
 	}
 	
 	/**
